@@ -10,7 +10,7 @@ export class UploadService {
       originalname: file.originalname,
       size: file.size,
       mimetype: file.mimetype,
-      url: `http://localhost:3000/uploads/${file.filename}`,
+      url: `${process.env.APP_URL || 'http://localhost:3000'}/uploads/${file.filename}`,
     };
   }
 }

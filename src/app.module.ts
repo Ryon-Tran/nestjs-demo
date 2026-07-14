@@ -10,6 +10,8 @@ import { AuthModule } from './auth/auth.module';
 import { LoggerMiddleware } from './common/middleware/logger.middleware';
 import { UploadModule } from './upload/upload.module';
 import { CacheModule } from '@nestjs/cache-manager';
+import { CartModule } from './cart/cart.module';
+import { OrderModule } from './order/order.module';
 
 @Module({
   imports: [
@@ -36,6 +38,8 @@ import { CacheModule } from '@nestjs/cache-manager';
     }),
     AuthModule,
     UploadModule,
+    CartModule,
+    OrderModule,
   ],
   controllers: [AppController],
   providers: [AppService],
